@@ -1,0 +1,91 @@
+.contenedor {
+  padding: 40px 10px;
+}
+.contenedor article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  height: 720px;
+  width: 450px;
+  position: relative;
+  cursor: pointer;
+}
+.contenedor article .color {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 25px;
+  animation: animate 5s linear infinite;
+}
+.contenedor article .color:nth-child(1) {
+  top: 350px;
+  right: -50px;
+  background: var(--rbgacolor);
+}
+.contenedor article .color:nth-child(2) {
+  top: 160px;
+  left: -60px;
+  background: var(--rbgacolor);
+}
+.contenedor article .contenedor-img {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 3s;
+}
+.contenedor article .contenedor-img img {
+  width: 300px;
+}
+.contenedor article .contenedor-caracteristicas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.contenedor article .contenedor-caracteristicas h1 {
+  font-size: 1.8em;
+  transform: scale(0);
+  transition: 0.1s;
+}
+.contenedor article .contenedor-caracteristicas p {
+  font-size: 1em;
+  margin: 10px 20px;
+  line-height: 1.5em;
+  transform: scale(0);
+  transition: 0.1s;
+}
+.contenedor article:hover {
+  transform: translateX(50px) translateY(-30px);
+  transition: 0.7s;
+  box-shadow: 10px 10px 200px var(--i);
+}
+.contenedor article:hover .contenedor-img {
+  transform: translateY(-140px);
+  transition: 3s;
+}
+.contenedor article:hover .contenedor-caracteristicas {
+  transform: translateY(190px);
+  color: white;
+}
+.contenedor article:hover .contenedor-caracteristicas h1 {
+  transform: scale(1);
+  transition: 5s;
+}
+.contenedor article:hover .contenedor-caracteristicas p {
+  transform: scale(1);
+  transition: 5s;
+}
+
+@keyframes animate {
+  0%, 100% {
+    transform: rotate(0deg) translateY(-50px);
+  }
+  50% {
+    transform: rotate(360deg) translateY(50px);
+  }
+}/*# sourceMappingURL=Personaje.css.map */
